@@ -34,9 +34,16 @@ Modernize Everything
    If a board is flagged the system will request information from the user, basically a 203, and enter it into the Issues Table.
    Serial Number | Process ID | Issue | Created Time | Created By | Closed Time | Closed By
    ------------- | ---------- | ----- | ------------ | ---------- | ----------- | ---------
-   384952 | 70123 | R1 Sk | 2020 06 24 15:03:15 | Ben | - | - 
+   384953 | 70123 | R1 Sk | 2020 06 24 15:03:15 | Ben | - | - 
    
    If board is flagged for a defect the individual conducting the rework closes the issue.
    
    Any time a board is tested a json will be stored in the Test Table.
-   Serial Number | 
+   Serial Number | Created Time | Results
+   ------------- | ------------ | -------
+   384952 | 2020 06 24 15:05:32 | {...}
+   
+   If a test fails a flag will automatically be placed on it.
+   Serial Number | Process ID | Issue | Created Time | Created By | Closed Time | Closed By
+   ------------- | ---------- | ----- | ------------ | ---------- | ----------- | ---------
+   384953 | 70123 | Failed Test | 2020 06 24 15:03:15 | Ben | - | - 
