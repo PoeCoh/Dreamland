@@ -19,6 +19,7 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
 Records will be held for a minimum of 4 years, after that the oldest records will be purged to make room for new records as required. Management will be alerted if disk space reaches 80% with no records eligible for removal.
 
 ## Process Table
+Primary table for database
    - Serial Number
    - Assembly ID
    - Process ID
@@ -27,6 +28,7 @@ Records will be held for a minimum of 4 years, after that the oldest records wil
    - End Time
 
 ## Issue Table
+Equivalent of the E203 with additional information stored per board.
    - Serial Number
    - Assembly ID
    - Process ID
@@ -38,6 +40,7 @@ Records will be held for a minimum of 4 years, after that the oldest records wil
    - Notes
    
 ## Test Table
+This table will store test results in json format. This is mostly for troubleshooting, RMA, sanity checks, and will not affect the process.
    - Serial Number
    - Assembly ID
    - Process ID
