@@ -56,6 +56,7 @@ This table will store test results in json format. This is mostly for troublesho
    - ~~Assembly ID~~
    - ~~Assembly Revision~~
    - Process ID
+     - While this will always be test, there are assemblies that require more than one test
    - Created Time
    - Results
    
