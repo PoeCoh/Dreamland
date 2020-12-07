@@ -5,7 +5,8 @@ Modernize Everything
 ## Note
 
 This is currently a very rough draft, mostly just to start ironing out the details.
-However I do have a database up and running with the tables defined below, with a CLI in C# for directly interfacing with the database and an API in PowerShell for integration in a web app.
+However I do have a database up and running with the tables defined below, with a CLI in C# for directly interfacing with the database and an API in PowerShell for integration in a web app. This is technically on a LAMP stack, as PowerShell is pretty much taking the place of PHP.
+I am currently experimenting with interfaces, more than likely an html as literally anything with any browser could run it.
 
 ## Current System
    - Boards are tracked by work order throughout the entire process
@@ -59,6 +60,8 @@ However I do have a database up and running with the tables defined below, with 
    
    At shipping, when a board is scanned the system will check to see if any unresolved flags exist, and verify that a record exists for all process IDs for the assembly.
 
+   Additionally there is a User Table containing UserNames and Passwords to access the web app. Currenlty it's plain text for simplicity but will become a proper hashtable in the future.
+   
 ## Long Term
    Initially this will be run in parallel to Global Shop, however eventually this will be the users primary method of interacting with Global Shop's systems. As this will already be collecting granular information along the entire process it can update Global Shop's database, either in real time or in a batch update after hours. A user will be able to log into the application/webapp to clock in, and Global Shop will be updated ever time the user completes a board.
    I'm planning on building a monitoring application that will track active processes in real time. If a user is taking X% longer than the 1000 board moving average, or if the system alerts a user that a board is missing a step it could flag management.
