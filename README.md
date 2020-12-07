@@ -10,6 +10,7 @@ Modernize Everything
 ## New System
    - Boards are tracked by Assembly ID throughout entire process by QR code
    - Incoming work orders will never ship before their preceding counterpart is completed
+   - Test results will be saved to a database in json format by serial number
 
 ## Product Management and Scheduling
    1. No more manual scheduling
@@ -22,36 +23,10 @@ Modernize Everything
       - Have spent a lot of time crawling through GS's documentation and this looks like something we are poorly utilizing, however this will take a lot of work to correct.
       
 ## Monthly Techinical Evaluations
-   In today's enviornment the attitude of "if it's not broke, don't fix it" no longer applies. It is much more efficient to make constant incremental changes than to accumulate technical debt that will have to be addressed.
+   In today's enviornment the attitude of "if it's not broke, don't fix it" no longer applies. It is much more efficient to make constant incremental changes than to accumulate technical debt that will have to be addressed. Cumbersomb interfaces, steps and tests should be streamlined as quickly as possible.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/PoeCoh/Dreamland/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Database
+   Boards will be scanned at the **beginning** of every step, and automatically entered into the process table when the next serial is scanned, the user selects "complete" (or similare), or the user flags the board.
+   Serial Number | Process ID | Start Time | End Time
+   ------------- | ---------- | ---------- | --------
+   384952 | 70123 | 2020 06 24 15:01:31 | 2020 06 24 15:02:45
