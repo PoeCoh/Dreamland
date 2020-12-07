@@ -27,13 +27,16 @@ Modernize Everything
 
 ## Database
    Boards will be scanned at the **beginning** of every step. The system will check what step the user is working on against what step the board is on. If there are no records of any prior step the interface will alert the user and will not continue. Serial will automatically entered into the Process Table when the next serial is scanned, the user selects "complete" (or similare), or the user flags the board for a defect or other issue.
-   Serial Number | Process ID | User | Start Time | End Time
-   ------------- | ---------- | ---- | ---------- | --------
-   384952 | 70123 | Ben | 2020 06 24 15:01:31 | 2020 06 24 15:02:45
+   Serial Number | Assembly ID | Process ID | User | Start Time | End Time
+   ------------- | ----------- | ---------- | ---- | ---------- | --------
+   384952 | Assy12832 | 70123 | Ben | 2020 06 24 15:01:31 | 2020 06 24 15:02:45
    
    If a board is flagged the system will request information from the user, basically a 203, and enter it into the Issues Table.
    Serial Number | Process ID | Issue | Created Time | Created By | Closed Time | Closed By
    ------------- | ---------- | ----- | ------------ | ---------- | ----------- | ---------
    384952 | 70123 | R1 Sk | 2020 06 24 15:03:15 | Ben | - | - 
    
-   If board is flagged for a defect the individual conducting the rework 
+   If board is flagged for a defect the individual conducting the rework closes the issue.
+   
+   Any time a board is tested a json will be stored in the Test Table.
+   Serial Number | 
