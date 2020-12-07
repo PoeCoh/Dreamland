@@ -15,9 +15,17 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
   - For test process, application will collect test data in json form when possible and create a record with data for each unit. In the event of failure test should automatically generate an Issue record for the unit
   - For shipping, application will check serial number for completed records for each process for assemlby, and verify no open Issues remain. If no issues are found unit is applied to a work order
   
+# Serial Number Details
+
+Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then printed as a QR in batches of 1000 (000-999)
+  - The date is to ensure that no two serial numbers could possibly be identical
+  - Casting in base64 is to dissasociate the serial number from a date as the actual date is irrelevant
+  - QR format to keep footprint as small as possible
+  
+  
 # Database Details
 
-Records will be held for a minimum of 4 years, after that the oldest records will be purged to make room for new records as required. Management will be alerted if disk space reaches 80% with no records eligible for removal.
+Records will be held for a minimum of 4 years, after that the oldest records will be purged to make room for new records as required (Will prioritize keeping Shipping records). Management will be alerted if disk space reaches 80% with no records eligible for removal.
 
 ## Process Table
 Primary table for database
