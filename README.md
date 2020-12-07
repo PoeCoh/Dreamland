@@ -54,6 +54,7 @@ This table will  be used to link multiple serial numbers together, in cases wher
    - Affiliated Serial Numbers Array
 
 ## User Table
+Used to deligate tasks
    - Name (hashed)
    - Password (hashed)
    - Primary processes (SMT, AOI, Build... )
