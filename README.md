@@ -52,3 +52,7 @@ Modernize Everything
    384953 | 70123 | Failed Test | 2020 06 24 15:03:15 | Ben | - | - 
    
    At shipping, when a board is scanned the system will check to see if any unresolved flags exist, and verify that a record exists for all process IDs for the assembly.
+
+## Long Term
+   Initially this will be run in parallel to Global Shop, however eventually this will be the users primary method of interacting with Global Shop's systems. As this will already be collecting granular information along the entire process it can update Global Shop's database, either in real time or in a batch update after hours. A user will be able to log into the application/webapp to clock in, and Global Shop will be updated ever time the user completes a board.
+   I'm planning on building a monitoring application that will track active processes in real time. If a user is taking X% longer than the 1000 board moving average, or if the system alerts a user that a board is missing a step it could flag management.
