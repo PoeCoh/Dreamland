@@ -2,6 +2,11 @@
 
 Modernize Everything
 
+## Note
+
+This is currently a very rough draft, mostly just to start ironing out the details.
+However I do have a database up and running with the tables defined below, with a CLI in C# for directly interfacing with the database and an API in PowerShell for integration in a web app.
+
 ## Current System
    - Boards are tracked by work order throughout the entire process
    - This leads to incoming work orders overlapping their preceding counterparts of the same assembly
@@ -20,7 +25,8 @@ Modernize Everything
       - Additionally interface will have the option to place a hold on a work order, all required assemblies and their steps will be removed from the schedule until the hold is cleared
       - With this system scheduling will shift focus from managing individual worker's calendars to keeping work order shipping volumes and dates accurate
    2. Utilize Global Shop's sub assemblies to streamline production and simplify management of branching products
-      - Have spent a lot of time crawling through GS's documentation and this looks like something we are poorly utilizing, however this will take a lot of work to correct.
+      - Have spent a lot of time crawling through GS's documentation and this looks like something we are poorly utilizing, however this will take a lot of work to correct
+   3. Assembly Instructions will be stored on a proper repository in a logical structure to make both maintanence and automation easy
       
 ## Monthly Techinical Evaluations
    In today's enviornment the attitude of "if it's not broke, don't fix it" no longer applies. It is much more efficient to make constant incremental changes than to accumulate technical debt that will have to be addressed. Cumbersomb interfaces, steps and tests should be streamlined as quickly as possible.
