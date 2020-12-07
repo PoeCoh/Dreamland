@@ -11,7 +11,7 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
     - User scans the next board, it is assumed that the prior board was completed
     - User clicks "OK"
     - User flags board for issue, Issue record will be created instead of a process record for this unit
-  - For test process, application will collect test data in json form when possible and create a record with data for each unit
+  - For test process, application will collect test data in json form when possible and create a record with data for each unit. In the event of failure test should automatically generate an Issue record for the unit
   - For shipping, application will check serial number for completed records for each process for assemlby, and verify no open Issues remain. If no issues are found unit is applied to a work order
   
 # Database Details
