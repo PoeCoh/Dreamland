@@ -79,8 +79,9 @@ This contains the assembly, revision, and affiliate data for each serial number.
      - This field will be used to link multiple serial numbers together for convenience, for instance when boards remain in panels. When groupled boards are split their affiliate fields will be cleared.
 
 ## User Table
-Used to deligate tasks
-   - Name (hashed)
+Used to deligate tasks and hold login credentials
+   - Name
+   - UserID (hashed)
    - Password (hashed)
    - Primary processes (SMT, AOI, Build... )
    - Secondary processes
