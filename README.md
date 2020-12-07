@@ -1,7 +1,3 @@
-# Operation Dreamland
-
-Modernize Everything
-
 ## Note
 
 This is currently a very rough draft, mostly just to start ironing out the details.
