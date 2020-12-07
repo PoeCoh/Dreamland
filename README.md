@@ -42,21 +42,25 @@ I am currently experimenting with interfaces, more than likely an html as litera
    384952 | Assy12832 | 70123 | Ben | 2020 06 24 15:01:31 | 2020 06 24 15:02:45
    
    If a board is flagged the system will request information from the user, basically a 203, and enter it into the Issues Table.
+   
    Serial Number | Process ID | Issue | Created Time | Created By | Closed Time | Closed By
    ------------- | ---------- | ----- | ------------ | ---------- | ----------- | ---------
    384953 | 70123 | R1 Sk | 2020 06 24 15:03:15 | Ben | - | - 
    
    If board is flagged for a defect the individual conducting the rework closes the issue.
+   
    Serial Number | Process ID | Issue | Created Time | Created By | Closed Time | Closed By
    ------------- | ---------- | ----- | ------------ | ---------- | ----------- | ---------
    384953 | 70123 | R1 Sk | 2020 06 24 15:03:15 | Ben | 2020 06 24 115:30:21 | Mike 
 
    Any time a board is tested a json will be stored in the Test Table.
+   
    Serial Number | Created Time | Results
    ------------- | ------------ | -------
    384952 | 2020 06 24 15:05:32 | {...}
    
    If a test fails a flag will automatically be placed on it.
+   
    Serial Number | Process ID | Issue | Created Time | Created By | Closed Time | Closed By
    ------------- | ---------- | ----- | ------------ | ---------- | ----------- | ---------
    384953 | 70123 | Failed Test | 2020 06 24 15:03:15 | Ben | - | - 
@@ -67,4 +71,5 @@ I am currently experimenting with interfaces, more than likely an html as litera
    
 ## Long Term
    Initially this will be run in parallel to Global Shop, however eventually this will be the users primary method of interacting with Global Shop's systems. As this will already be collecting granular information along the entire process it can update Global Shop's database, either in real time or in a batch update after hours. A user will be able to log into the application/webapp to clock in, and Global Shop will be updated ever time the user completes a board.
+   
    I'm planning on building a monitoring application that will track active processes in real time. If a user is taking X% longer than the 1000 board moving average, or if the system alerts a user that a board is missing a step it could flag management.
