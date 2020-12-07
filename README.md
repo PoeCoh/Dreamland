@@ -18,8 +18,11 @@ Modernize Everything
       - Estimated completion time for each step will be based off a 1000 board moving average, or for less than 1000 units a json with predicted times
       - Additionally interface will have the option to place a hold on a work order, all required assemblies and their steps will be removed from the schedule until the hold is cleared
       - With this system scheduling will shift focus from managing individual worker's calendars to keeping work order shipping volumes and dates accurate
-   2. Utilize Global Shop's sub assemblies to streamline production and simplify similar or near identical products
-      - Have spent a lot of time crawling through GS's documentation and this looks like something we are poorly utilizing, however this will take a lot of work to correct but better now than accumulate more technical debt
+   2. Utilize Global Shop's sub assemblies to streamline production and simplify management of branching products
+      - Have spent a lot of time crawling through GS's documentation and this looks like something we are poorly utilizing, however this will take a lot of work to correct.
+      
+## Monthly Techinical Evaluations
+   In today's enviornment the attitude of "if it's not broke, don't fix it" no longer applies. It is much more efficient to make constant incremental changes than to accumulate technical debt that will have to be addressed.
 
 ### Markdown
 
