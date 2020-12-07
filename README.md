@@ -21,8 +21,8 @@ Records will be held for a minimum of 4 years, after that the oldest records wil
 ## Process Table
 Primary table for database
    - Serial Number
-   ~~- Assembly ID~~
-   ~~- Assembly Revision~~ 
+   - ~~Assembly ID~~
+   - ~~Assembly Revision~~ 
    - Process ID
    - User
    - Start Time
