@@ -26,7 +26,12 @@ Modernize Everything
    In today's enviornment the attitude of "if it's not broke, don't fix it" no longer applies. It is much more efficient to make constant incremental changes than to accumulate technical debt that will have to be addressed. Cumbersomb interfaces, steps and tests should be streamlined as quickly as possible.
 
 ## Database
-   Boards will be scanned at the **beginning** of every step, and automatically entered into the process table when the next serial is scanned, the user selects "complete" (or similare), or the user flags the board.
+   Boards will be scanned at the **beginning** of every step. The system will check what step the user is working on against what step the board is on. If there are no records of any prior step the interface will alert the user and will not continue. Serial will automatically entered into the Process Table when the next serial is scanned, the user selects "complete" (or similare), or the user flags the board for a defect or other issue.
    Serial Number | Process ID | Start Time | End Time
    ------------- | ---------- | ---------- | --------
    384952 | 70123 | 2020 06 24 15:01:31 | 2020 06 24 15:02:45
+   
+   If a board is flagged the system will request information from the user, basically a 203, and enter it into the Issues Table.
+   Serial Number | Process ID | Created Time | Closed Time
+   ------------- | ---------- | ------------ | -----------
+   384952 | 70123 | 2020 06 24 15:03:15 | -
