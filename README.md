@@ -28,6 +28,9 @@ I am currently experimenting with interfaces, more than likely an html as litera
    2. Utilize Global Shop's sub assemblies to streamline production and simplify management of branching products
       - Have spent a lot of time crawling through GS's documentation and this looks like something we are poorly utilizing, however this will take a lot of work to correct
    3. Assembly Instructions will be stored on a proper repository in a logical structure to make both maintanence and automation easy
+      - Assembly Folder
+        - Process Folder
+          - Notes and images
       
 ## Monthly Techinical Evaluations
    In today's enviornment the attitude of "if it's not broke, don't fix it" no longer applies. It is much more efficient to make constant incremental changes than to accumulate technical debt that will have to be addressed. Cumbersomb interfaces, steps and tests should be streamlined as quickly as possible.
