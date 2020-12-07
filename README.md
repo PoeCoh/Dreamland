@@ -21,8 +21,8 @@ Records will be held for a minimum of 4 years, after that the oldest records wil
 ## Process Table
 Primary table for database
    - Serial Number
-   - Assembly ID
-   - Assembly Revision
+   ~~- Assembly ID~~
+   ~~- Assembly Revision~~ 
    - Process ID
    - User
    - Start Time
@@ -31,8 +31,8 @@ Primary table for database
 ## Issue Table
 Equivalent of the E203 with additional information stored per board.
    - Serial Number
-   - Assembly ID
-   - Assembly Revision
+   ~~- Assembly ID~~
+   ~~- Assembly Revision~~
    - Process ID
    - Created By
    - Created Time
@@ -44,19 +44,28 @@ Equivalent of the E203 with additional information stored per board.
 ## Test Table
 This table will store test results in json format. This is mostly for troubleshooting, RMA, sanity checks, and will not affect the process.
    - Serial Number
-   - Assembly ID
-   - Assembly Revision
+   ~~- Assembly ID~~
+   ~~- Assembly Revision~~
    - Process ID
    - Created Time
    - Results
    
-## Affiliated Table
-This table will  be used to link multiple serial numbers together, in cases where boards are grouped for convenience, or when boards are combined into a new assmbly. When groupled boards are split their affiliate records will be removed.
+~~## Affiliated Table
+This table will  be used to link multiple serial numbers together, in cases where boards are grouped for convenience, or when boards are combined into a new assmbly. When groupled boards are split their affiliate records will be removed.~~
+   ~~- Serial Number~~
+   ~~- Assembly ID~~
+   ~~- Assembly Revision~~
+   ~~- Created Date (for record removal)~~
+   ~~- Affiliated Serial Numbers Array~~
+
+## Assembly Table
+This contains the assembly, revision, and affiliate data for each serial number. While this is yet another table this removes redundant data in all other tables, so when a revision or assemlby change is made only one table needs to be updated.
    - Serial Number
    - Assembly ID
-   - Assembly Revision
-   - Created Date (for record removal)
-   - Affiliated Serial Numbers Array
+   - Hardware Revision
+   - Software Revision
+   - Affiliated Serial Numbers
+     - This field will be used to link multiple serial numbers together, in cases where boards are grouped for convenience, or when boards are combined into a new assmbly. When groupled boards are split their affiliate fields will be cleared.
 
 ## User Table
 Used to deligate tasks
