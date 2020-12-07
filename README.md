@@ -64,8 +64,10 @@ This contains the assembly, revision, and affiliate data for each serial number.
    - Assembly ID
    - Hardware Revision
    - Software Revision
+   - Sub Assembly Serial Numbers
+     - This field is used when units are combined to produce a new assembly. When other serial numbers are listed here their previous records will be maintained, but any future QR code scans will forward to the owning Serial Number.
    - Affiliated Serial Numbers
-     - This field will be used to link multiple serial numbers together, in cases where boards are grouped for convenience, or when boards are combined into a new assmbly. When groupled boards are split their affiliate fields will be cleared.
+     - This field will be used to link multiple serial numbers together for convenience, for instance when boards remain in panels. When groupled boards are split their affiliate fields will be cleared.
 
 ## User Table
 Used to deligate tasks
