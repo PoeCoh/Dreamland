@@ -51,4 +51,4 @@ Modernize Everything
    ------------- | ---------- | ----- | ------------ | ---------- | ----------- | ---------
    384953 | 70123 | Failed Test | 2020 06 24 15:03:15 | Ben | - | - 
    
-   
+   At shipping, when a board is scanned the system will check to see if any unresolved flags exist, and verify that a record exists for all process IDs for the assembly.
