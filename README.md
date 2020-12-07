@@ -7,6 +7,7 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
   - Estimated time required is calculated by assemblies 1000 unit moving average time for each step remaining, for each board remaining
   - If management places a hold on a work order all related assemblies and their processes will not be assigned for work until the hold is lifted
 - For each board, at the start of each process user will scan QR code, application will automatically log each board and push updates to Global Shop
+  - Application will verify that records exist for all previous processes, for each board, if records are not found user will be notified and board will not continue
   - Information will be pushed at the end of the process for each board, process ends when
     - User scans the next board, it is assumed that the prior board was completed
     - User clicks "OK"
