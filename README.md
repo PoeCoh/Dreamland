@@ -88,6 +88,4 @@ Used to deligate tasks and hold login credentials
    - Secondary processes
    
 # Experimenting with junk
-  ![Image](/0000/download.jpg)
-  
   [630058B](/docs/Assembly Instructions/Test.md)
