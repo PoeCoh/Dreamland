@@ -22,6 +22,7 @@ Records will be held for a minimum of 4 years, after that the oldest records wil
 Primary table for database
    - Serial Number
    - Assembly ID
+   - Assembly Revision
    - Process ID
    - User
    - Start Time
@@ -31,6 +32,7 @@ Primary table for database
 Equivalent of the E203 with additional information stored per board.
    - Serial Number
    - Assembly ID
+   - Assembly Revision
    - Process ID
    - Created By
    - Created Time
@@ -43,14 +45,17 @@ Equivalent of the E203 with additional information stored per board.
 This table will store test results in json format. This is mostly for troubleshooting, RMA, sanity checks, and will not affect the process.
    - Serial Number
    - Assembly ID
+   - Assembly Revision
    - Process ID
    - Created Time
    - Results
    
 ## Affiliated Table
-This table will  be used to link multiple serial numbers together, in cases where boards are grouped for convenience, or when boards are combined into a new assmbly
+This table will  be used to link multiple serial numbers together, in cases where boards are grouped for convenience, or when boards are combined into a new assmbly. When groupled boards are split their affiliate records will be removed.
    - Serial Number
    - Assembly ID
+   - Assembly Revision
+   - Created Date (for record removal)
    - Affiliated Serial Numbers Array
 
 ## User Table
