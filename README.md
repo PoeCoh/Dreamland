@@ -37,7 +37,10 @@ Modernize Everything
    384953 | 70123 | R1 Sk | 2020 06 24 15:03:15 | Ben | - | - 
    
    If board is flagged for a defect the individual conducting the rework closes the issue.
-   
+   Serial Number | Process ID | Issue | Created Time | Created By | Closed Time | Closed By
+   ------------- | ---------- | ----- | ------------ | ---------- | ----------- | ---------
+   384953 | 70123 | R1 Sk | 2020 06 24 15:03:15 | Ben | 2020 06 24 115:30:21 | Mike 
+
    Any time a board is tested a json will be stored in the Test Table.
    Serial Number | Created Time | Results
    ------------- | ------------ | -------
@@ -47,3 +50,5 @@ Modernize Everything
    Serial Number | Process ID | Issue | Created Time | Created By | Closed Time | Closed By
    ------------- | ---------- | ----- | ------------ | ---------- | ----------- | ---------
    384953 | 70123 | Failed Test | 2020 06 24 15:03:15 | Ben | - | - 
+   
+   
