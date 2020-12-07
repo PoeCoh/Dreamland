@@ -46,3 +46,9 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
    - Serial Number
    - Assembly ID
    - Affiliated Serial Numbers Array
+
+## User Table
+   - Name (hashed)
+   - Password (hashed)
+   - Primary processes (SMT, AOI, Build... )
+   - Secondary processes
