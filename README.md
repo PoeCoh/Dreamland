@@ -1,8 +1,22 @@
-## Welcome to GitHub Pages
+# Operation Dreamland
 
-You can use the [editor on GitHub](https://github.com/PoeCoh/Dreamland/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Modernize Everything
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Current System
+   - Boards are tracked by work order throughout the entire process
+   - This leads to incoming work orders overlapping their preceding counterparts of the same assembly
+   - Does not leverage Global Shops assemblies system creating more overhead
+   
+## New System
+   - Boards are tracked by Assembly ID throughout entire process by QR code
+   - Incoming work orders will never ship before their preceding counterpart is completed
+
+## Product Management and Scheduling
+   1. No more manual scheduling
+      - Database will read active employees from Global Shop and dynamically assign jobs by priority
+      - Priority is based off of estimated completion time for all remaining steps against the time until due
+      - Estimated completion time for each step will be based off a 1000 board moving average, or for less than 1000 units a json with predicted times
+      - Additionally interface will have the option to place a hold on a work order, all required assemblies and their steps will be removed from the schedule until the hold is cleared
 
 ### Markdown
 
