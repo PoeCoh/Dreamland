@@ -4,7 +4,7 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
 - User logs into application
 - Application assigns process (assembly/processID) based on priority and displays task related instructions to user
   - Priority is calculated based on estimated time required against planned shipping date
-  - Estimated time required is calculated by assemblies 1000 unit running average time for each step remaining, for each board remaining
+  - Estimated time required is calculated by assemblies 1000 unit moving average time for each step remaining, for each board remaining
   - If management places a hold on a work order all related assemblies and their processes will not be assigned for work until the hold is lifted
 - For each board, at the start of each process user will scan QR code, application will automatically log each board and push updates to Global Shop
   - Information will be pushed at the end of the process for each board, process ends when
@@ -15,6 +15,8 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
   - For shipping, application will check serial number for completed records for each process for assemlby, and verify no open Issues remain. If no issues are found unit is applied to a work order
   
 # Database Details
+
+Records will be held for a minimum of 4 years, after that the oldest records will be purged to make room for new records as required. Management will be alerted if disk space reaches 80% with no records eligible for removal.
 
 ## Process Table
    - Serial Number
@@ -43,6 +45,7 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
    - Results
    
 ## Affiliated Table
+This table will  be used to link multiple serial numbers together, in cases where boards are grouped for convenience, or when boards are combined into a new assmbly
    - Serial Number
    - Assembly ID
    - Affiliated Serial Numbers Array
