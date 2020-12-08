@@ -37,9 +37,11 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
    - Shop issues related to this assembly
 3. User scans each assembly at start of process
    - Application fetches Serial Number's data from MDB
+   
      Serial Number | Process
      ------------- | -------
      sd399Dh3123 | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
+     
    - Application verifies that all prior steps have been completed
   
 # Serial Number Details
