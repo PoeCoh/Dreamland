@@ -47,13 +47,15 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
    - Process for board ends when
      - User clicks `Complete`, Process list is updated for serial number
      
-     
+       Serial Number | Process
+       ------------- | -------
+       sd399Dh3123 | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"Build":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
      
      - User clicks `Issue`, an Issue Record is generated instead of updating the serial number's process list
        
        Serial Number | Created | Closed
        ------------- | ----- | ------
-       sd399Dh3123 | `{"Process":"Build","Created On":"YYYYMDDHHmmSS","Created By":"Ben","Issue":"Shits fucked up"}` | `{"Process":"Rework","Closed On":"YYYYMMDDHHmmSS","Closed By":"Ben","Notes":"Everything was missing"}`
+       sd399Dh3123 | `{"Process":"Build","Created On":"YYYYMDDHHmmSS","Created By":"Ben","Issue":"Shits fucked up"}` | `{"Process":"Rework","Closed On":"YYYYMMDDHHmmSS","Closed By":"Ben","Notes":"Fixed everything"}`
      
      - User scans another board, prior board is assumed complete
   
