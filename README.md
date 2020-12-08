@@ -105,3 +105,4 @@ Documentation will be stored in a repository as such:
 This will allow for the application to easily find the correct information for any process and simplify automation where possible
 
 [Sample process doc](docs/630041/Test/Instruction.md)
+[Sample 2](/docs/EDS-SLRF410623-R3/Test/Instruction.md)
