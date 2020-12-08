@@ -28,9 +28,8 @@ Results are logged in a new file for each day. Be sure to move logs to the ‘Fu
 
 ## REQUIRED MATERIALS
 Assemble the following materials:
-
-Fixture C9223 (Future Electronics Swisslog Tester)
-Test laptop - dedicated to this job; software is pre-installed
-USB barcode scanner - capable of scanning QR codes
-ST Link V2 programmer - dedicated to this job
-Golden DUT Board - provided by Future. Keep with the fixture.
+- Fixture C9223 (Future Electronics Swisslog Tester)
+- Test laptop - dedicated to this job; software is pre-installed
+- USB barcode scanner - capable of scanning QR codes
+- ST Link V2 programmer - dedicated to this job
+- Golden DUT Board - provided by Future. Keep with the fixture.
