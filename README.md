@@ -71,7 +71,9 @@ Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then
   - The date is to ensure that no two serial numbers could possibly be identical
   - Casting in base64 is to dissasociate the serial number from a date as the actual date is irrelevant
   - QR format to keep footprint as small as possible, last 3 digits will also be displayed in plain text at the bottom of the label as some form of distinguishable marking
-  
+
+<img align="center" width="100" height="100" src="Unitag_QRCode_1607393414668.png">
+
 ![QRC](Unitag_QRCode_1607393414668.png)
   
 ## .      123
