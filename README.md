@@ -74,7 +74,7 @@ Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then
   
 ![QRC](Unitag_QRCode_1607393414668.png)
   
-##      123
+## .      123
   
 # Database Details
 Records will be held for a minimum of 4 years, after that the oldest records will be purged to make room for new records. Management will be alerted if disk space reaches x% with no more records eligible for removal.
