@@ -4,6 +4,8 @@
   ---- | -------- | ---- | ------
   hash | hash | Ben | {...}
   
+  Skills Array
+  
   ```json
   {
       "Soldering":1,
