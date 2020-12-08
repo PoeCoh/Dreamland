@@ -17,10 +17,10 @@ All parameters such as firmware version and checksum are stored in the ‘config
 
 Note from Denis at Future regarding occasional trouble getting the test to pass with the capsule at 3.5”:
 
-I can confirm that the 3.5” read test issue is related to background RF noise, at least nearby “noise”.
+> I can confirm that the 3.5” read test issue is related to background RF noise, at least nearby “noise”.
 In my case, if the test jig was pushed at the back of my bench, near the bench power bar and several connected wall mount power supplies , I had trouble reading further than 2.5in. But If I pulled the test jig about 6 inches away from the back of the bench, then I could read the receiver capsule even a bit further than 4”. (I made a little video showing this)
-So just by moving the test set-up several inches I could get a very good reading range or a very poor range. Note also that I built this 2nd test set-up, with the power input box near the fuse boxes, close to the DUT test, so away from the Receiver tube.  But even like this, I had the behavior described above. So In your case, if just moving the jig does not improve the reading range, you could try moving the power input box away from the receiver tube. Also you may have much more “ambient noise” in your plant.
-Please also note that the 2 coupled antennas in front of the receiver tube are critical for reading range. They must be clipped in place properly.
+> So just by moving the test set-up several inches I could get a very good reading range or a very poor range. Note also that I built this 2nd test set-up, with the power input box near the fuse boxes, close to the DUT test, so away from the Receiver tube.  But even like this, I had the behavior described above. So In your case, if just moving the jig does not improve the reading range, you could try moving the power input box away from the receiver tube. Also you may have much more “ambient noise” in your plant.
+> Please also note that the 2 coupled antennas in front of the receiver tube are critical for reading range. They must be clipped in place properly.
 
 
 Results are logged in a new file for each day. Be sure to move logs to the ‘Future Shared Files’ team drive at the end of each day of testing. The folder is linked at the end of this test procedure.
