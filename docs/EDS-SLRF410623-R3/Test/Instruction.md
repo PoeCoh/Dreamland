@@ -6,7 +6,8 @@ Future Electronics | Swisslog RFID | EDS-SLRF410623-R3
 
 ## PURPOSE AND SCOPE
 The purpose of this document is to specify the setup and procedures required to perform a production verification test of the Future / Swisslog RFID EDS-SLRF410623-R3 board assembly.
-TEST LIMITATIONS AND OTHER NOTES
+
+## TEST LIMITATIONS AND OTHER NOTES
 Keep this supplemental materials document open while testing for photos, videos, and other assistance.
 
 This fixture was designed by Future Electronics. EDM wrote the PC test program to control the fixture.
