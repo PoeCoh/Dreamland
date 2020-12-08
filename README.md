@@ -23,8 +23,7 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics.
      
      Name | Roles
      ---- | -----
-     Ben | ```json
-     {"Roles":["Test","Program"]}
+     Ben | `{"Roles":["Test","Program"]}`
      ```
    - Application assigns job based on priority with information from GS and MDB
      - Priority is based off of estimated time to complete all steps based on 1000 board moving average against time until product is due
