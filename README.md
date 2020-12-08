@@ -20,13 +20,11 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics.
    - Application fetches assigned work roles for user (SMT, AOI, Build...) from MDB
      - Multiple roles can be assigned
      - Application will prioritize roles based on order
-     ```javascript
-     {
-        "Name":"Ben",
-        "Roles":["Test","Program"],
-        "UserName":"Hash",
-        "Password":"Hash"
-     }
+     
+     Name | Roles
+     ---- | -----
+     Ben | ```json
+     {"Roles":["Test","Program"]}
      ```
    - Application assigns job based on priority with information from GS and MDB
      - Priority is based off of estimated time to complete all steps based on 1000 board moving average against time until product is due
