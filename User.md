@@ -6,7 +6,7 @@
   
   ```json
   {
-      "Soldering":1
+      "Soldering":1,
       "Technical":3
   }
   ```
