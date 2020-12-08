@@ -62,7 +62,13 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
 4. User requests new job when out of available assemblies for this process, or flags the process itself
    - User can request a new job at any point, but if nothing has changed they will be served the same assembly/process
    - If user flags a process management will be immediantly notified
-  
+## From the perspective of management
+- Application displays list of priority assemblies based on 1000 unit moving average against time remaining until assembly is due, in order of severity
+- Management can manully prioritize a process that is excluded due to units being below threshold for prioritization, or to force application to assign process to next available user with matching roles
+- Application monitors posts to database, it will flag any process that exceeds x% of its 1000 board moving average
+  - This tracks on both ends, above or below as both can be indicators of issues
+- Any process flagged by a user will be displayed
+  - Application will require someone to affirm they have seen the flag within x time, else it will start sending emails and chats/texts if possible
 # Serial Number Details
 
 Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then printed as a QR in batches of 1000 (000-999)
