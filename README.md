@@ -49,7 +49,7 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
 
 Notes:
 - Processes are tracked and prioritized by ASSEMBLY ID, not WORK ORDER. Assemblies are attached to work orders in shipping
-- For shipping, when scanned application will verify all processes have been completed and no Issue Records remain open
+- For shipping, when assembly is scanned application will verify all processes have been completed and no Issue Records remain open
 - For test, any data output by software will be captured and stored in a Test Record in JSON format
   
   Serial Number | Process | Data
@@ -66,84 +66,10 @@ Notes:
 - Any process flagged by a user will be displayed
   - Application will require someone to affirm they have seen the flag within x time, else it will start sending emails and chats/texts if possible
 # Serial Number Details
-
 Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then printed as a QR in batches of 1000 (000-999)
   - The date is to ensure that no two serial numbers could possibly be identical
   - Casting in base64 is to dissasociate the serial number from a date as the actual date is irrelevant
   - QR format to keep footprint as small as possible
   
-  
 # Database Details
-
 Records will be held for a minimum of 4 years, after that the oldest records will be purged to make room for new records as required (Will prioritize keeping Shipping records). Management will be alerted if disk space reaches 80% with no records eligible for removal.
-
-## Process Table
-Primary table for database
-```json
-{
-    "Serial Number":"4h39dh9e932",
-    "
-}
-```
-   - Serial Number
-   - ~~Assembly ID~~
-   - ~~Assembly Revision~~ 
-   - Process ID
-   - User
-   - Start Time
-   - End Time
-
-## Issue Table
-Equivalent of the E203 with additional information stored per board.
-   - Serial Number
-   - ~~Assembly ID~~
-   - ~~Assembly Revision~~
-   - Process ID
-   - Created By
-   - Created Time
-   - Issue
-   - Closed By
-   - Closed Time
-   - Notes
-   
-## Test Table
-This table will store test results in json format. This is mostly for troubleshooting, RMA, sanity checks, and will not affect the process.
-   - Serial Number
-   - ~~Assembly ID~~
-   - ~~Assembly Revision~~
-   - Process ID
-     - While this will always be test, there are assemblies that require more than one test
-   - Created Time
-   - Results
-   
-## ~~Affiliated Table~~
-~~This table will  be used to link multiple serial numbers together, in cases where boards are grouped for convenience, or when boards are combined into a new assmbly. When groupled boards are split their affiliate records will be removed.~~
-   - ~~Serial Number~~
-   - ~~Assembly ID~~
-   - ~~Assembly Revision~~
-   - ~~Created Date (for record removal)~~
-   - ~~Affiliated Serial Numbers Array~~
-
-## Assembly Table
-This contains the assembly, revision, and affiliate data for each serial number. While this is yet another table this removes redundant data in all other tables, so when a revision or assemlby change is made only one table needs to be updated.
-   - Serial Number
-   - Assembly ID
-   - Hardware Revision
-   - Software Revision
-   - Sub Assembly Serial Numbers
-     - This field is used when units are combined to produce a new assembly. When other serial numbers are listed here their previous records will be maintained, but any future QR code scans will forward to the owning Serial Number.
-   - Affiliated Serial Numbers
-     - This field will be used to link multiple serial numbers together for convenience, for instance when boards remain in panels. When groupled boards are split their affiliate fields will be cleared.
-
-## User Table
-Used to deligate tasks and hold login credentials
-   - Name
-   - UserID (hashed)
-   - Password (hashed)
-   - Primary processes (SMT, AOI, Build... )
-   - Secondary processes
-   
-# Notes
-  - Just learned that MariaDB supports JSON arrays, which will change things considerably for the better.
-# Experimenting with junk
-  [630058 B](/docs/Assembly Instructions/630058 B/Test.md)
