@@ -74,3 +74,25 @@ Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then
   
 # Database Details
 Records will be held for a minimum of 4 years, after that the oldest records will be purged to make room for new records. Management will be alerted if disk space reaches x% with no more records eligible for removal.
+
+# Documentation Details
+Documentation will be stored in a repository as such:
+- docs
+  - moogPOS
+    - SMT
+      - Instructions.md
+      - Photo1.jpg
+      - Photo2.jpg
+    - AOI
+    - Test
+    - Ship
+  - gridpointPOS
+    - SMT
+    - AOI
+    - Build
+      - Instructions.md
+      - Photo1.jpg
+    - Test
+    - Ship
+
+This will allow for the application to easily find the correct information for any process and simplify automation where possible
