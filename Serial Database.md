@@ -12,4 +12,4 @@ Process Array
     "AOI":[20210101073000,20210101073302]
 }
 ```
-Each step that is successfully completed is added to the array
+Each step that is successfully completed is added to the array with the time it was started and the time it was completed
