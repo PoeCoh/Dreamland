@@ -55,7 +55,7 @@ Notes:
   ------------- | ------- | ----
   sd399Dh3123 | Test | `{ ... }`
   
-  -Data is captured purely for troubleshooting, RMAs, and sanity, it is not used for any verification or calculation
+  - Data is captured purely for troubleshooting, RMAs, and sanity, it is not used for any verification or calculation
   
 ## From the perspective of management
 - Application displays list of priority assemblies based on 1000 unit moving average against time remaining until assembly is due, in order of severity
