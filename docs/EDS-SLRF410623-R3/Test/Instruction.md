@@ -27,7 +27,6 @@ Note from Denis at Future regarding occasional trouble getting the test to pass 
 Results are logged in a new file for each day. Be sure to move logs to the ‘Future Shared Files’ team drive at the end of each day of testing. The folder is linked at the end of this test procedure.
 
 ## REQUIRED MATERIALS
-Assemble the following materials:
 - Fixture C9223 (Future Electronics Swisslog Tester)
 - Test laptop - dedicated to this job; software is pre-installed
 - USB barcode scanner - capable of scanning QR codes
