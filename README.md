@@ -49,6 +49,7 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
 
 Notes:
 - Processes are tracked and prioritized by ASSEMBLY ID, not WORK ORDER. Assemblies are attached to work orders in shipping
+- For shipping, when scanned application will verify all processes have been completed and no Issue Records remain open
 - For test, any data output by software will be captured and stored in a Test Record in JSON format
   
   Serial Number | Process | Data
