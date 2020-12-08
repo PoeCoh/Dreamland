@@ -15,8 +15,9 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
   - For test process, application will collect test data in json form when possible and create a record with data for each unit. In the event of failure test should automatically generate an Issue record for the unit
   - For shipping, application will check serial number for completed records for each process for assemlby, and verify no open Issues remain. If no issues are found unit is applied to a work order
   
-Having learned that MariaDB supports JSON arrays I'm changing my tactics.
-1. User logs on
+Having learned that MariaDB supports JSON arrays I'm changing my tactics. This will allow me to consolidate the database by quite a bit.
+
+1. User logs on Application
    - Application fetches assigned work roles for user from MDB
    
      Name | Roles
@@ -26,9 +27,20 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics.
      - Multiple roles can be assigned
      - Application will prioritize roles based on order
    - Application creates a priority list of available jobs that match users roles
-     - A job will not be prioritized if there is less than 1 hours worth of work ready for any given process, unless it is the total remainder or it is manually prioritized by management
-     - Priority will be calculated from estimated time to complete all steps based on 1000 board moving average, against time remaining until product is due
-     - 
+     - A job will not be prioritized if there is less than 1 hours worth of work ready for any given process, unless it is the total remainder left (30 minutes of work left and all are ready for given process)
+     - Priority will be calculated from estimated time to complete all steps based on 1000 unit moving average, against time remaining until assembly is due
+     - Management will have the ability to manually mark a job for prioritization, in this case it will take precedence for first available user with matching roles
+     - Note: prioritization is per process, not globally for the entire assembly
+2. Application fetches information for assembly
+   - List of all prior processes from Global Shop
+   - Documentation and any other required files for this process
+   - Shop issues related to this assembly
+3. User scans each assembly at start of process
+   - Application fetches Serial Number's data from MDB
+     Serial Number | Process
+     ------------- | -------
+     sd399Dh3123 | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
+   - Application verifies that all prior steps have been completed
   
 # Serial Number Details
 
