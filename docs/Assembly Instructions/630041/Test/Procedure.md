@@ -35,4 +35,7 @@ Inova | Slimline | 630041
    7. Verify the green `READY` LED on the test set is illuminated **only** when the green LEDs are illuminated on the <abbr title="Device Under Test">DUT</abbr>
    8. Remove the power cable and then the data cables, Repeat the procedure for the next unit to be tested
    9. Place label as shown
-   Image
+   
+<p align="center">
+  <img src="label.jpg">
+</p>
