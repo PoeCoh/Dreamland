@@ -74,18 +74,14 @@ Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then
 
 <p align="center">
   <img width="100" height="100" src="Unitag_QRCode_1607393414668.png">
-  <<b>Some Links:</b>
+  <<b>123</b>
 </p>
 
 234 
 
 <p align="center">
-  <b>Some Links:</b><br>
-  <a href="#">Link 1</a> |
-  <a href="#">Link 2</a> |
-  <a href="#">Link 3</a>
-  <br><br>
-  <img src="http://s.4cdn.org/image/title/105.gif">
+  <b>123</b><br>
+  <img src="Unitag_QRCode_1607393414668.png">
 </p>
 
     123
