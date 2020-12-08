@@ -43,6 +43,19 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
      sd399Dh3123 | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
      
    - Application verifies that all prior steps have been completed
+   - Application notes current time for logging purposes
+   - Process for board ends when
+     - User clicks `Complete`, Process list is updated for serial number
+     
+     
+     
+     - User clicks `Issue`, an Issue Record is generated instead of updating the serial number's process list
+       
+       Serial Number | Created | Closed
+       ------------- | ----- | ------
+       sd399Dh3123 | `{"Process":"Build","Created On":"YYYYMDDHHmmSS","Created By":"Ben","Issue":"Shits fucked up"}` | `{"Process":"Rework","Closed On":"YYYYMMDDHHmmSS","Closed By":"Ben","Notes":"Everything was missing"}`
+     
+     - User scans another board, prior board is assumed complete
   
 # Serial Number Details
 
