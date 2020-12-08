@@ -39,18 +39,18 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
 3. User scans each assembly at start of process
    - Application fetches Serial Number's data from MDB
    
-     Serial Number | Process
-     ------------- | -------
-     sd399Dh3123 | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
+     Serial Number | Assembly | Process
+     ------------- | -------- | -------
+     sd399Dh3123 | moogPOS | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
      
    - Application verifies that all prior steps have been completed
    - Application notes current time for logging purposes
    - Process for board ends when
      - User clicks `Complete`, Process Record is updated for serial number
      
-       Serial Number | Process
-       ------------- | -------
-       sd399Dh3123 | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"Build":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
+       Serial Number | Assembly | Process
+       ------------- | -------- | -------
+       sd399Dh3123 | moogPOS | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"Build":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
      
      - User clicks `Issue`, an Issue Record is generated instead of updating the serial number's Process Record
        
@@ -61,7 +61,17 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
      - User scans another board, prior board is assumed complete
 4. User requests new job when out of available assemblies for this process, or flags the process itself
    - User can request a new job at any point, but if nothing has changed they will be served the same assembly/process
-   - If user flags a process management will be immediantly notified
+   - If user flags a process management will be immediantly notified   
+Notes:
+- 
+- For test, any data output by software will be captured and stored in a Test Record in JSON format
+  
+  Serial Number | Process | Data
+  ------------- | ------- | ----
+  sd399Dh3123 | Test | `{...}`
+  
+  -Data is captured purely for troubleshooting, RMAs, and sanity, it is not used for any verification or calculation
+  
 ## From the perspective of management
 - Application displays list of priority assemblies based on 1000 unit moving average against time remaining until assembly is due, in order of severity
 - Management can manully prioritize a process that is excluded due to units being below threshold for prioritization, or to force application to assign process to next available user with matching roles
