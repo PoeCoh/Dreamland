@@ -25,9 +25,9 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics.
      
      - Multiple roles can be assigned
      - Application will prioritize roles based on order
-
-   - Application assigns job based on priority with information from GS and MDB
-     - Priority is based off of estimated time to complete all steps based on 1000 board moving average against time until product is due
+   - Application creates a priority list of available jobs that match users roles
+     - A job will not be prioritized if there is less than 1 hours worth of work ready for any given process, unless it is the total remainder or it is manually prioritized by management
+     - Priority will be calculated from estimated time to complete all steps based on 1000 board moving average, against time remaining until product is due
      - 
   
 # Serial Number Details
