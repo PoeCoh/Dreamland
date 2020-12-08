@@ -9,6 +9,7 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
      ---- | -----
      Ben | `{ "Roles":["Test","Program"] }`
      
+     - [Secondary User Page](docs/User.md)
      - Multiple roles can be assigned
      - Application will prioritize roles based on order
    - Application creates a priority list of available jobs that match users roles
