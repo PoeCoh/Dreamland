@@ -15,6 +15,23 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
   - For test process, application will collect test data in json form when possible and create a record with data for each unit. In the event of failure test should automatically generate an Issue record for the unit
   - For shipping, application will check serial number for completed records for each process for assemlby, and verify no open Issues remain. If no issues are found unit is applied to a work order
   
+Having learned that MariaDB supports JSON arrays I'm changing my tactics.
+1. User logs on
+   - Application fetches assigned work roles for user (SMT, AOI, Build...) from MDB
+     - Multiple roles can be assigned
+     - Application will prioritize roles based on order
+     ```json
+     {
+        "Name":"Ben",
+        "Roles":["Test","Program"],
+        "UserName":"Hash",
+        "Password":"Hash"
+     }
+     ```
+   - Application assigns job based on priority with information from GS and MDB
+     - Priority is based off of estimated time to complete all steps based on 1000 board moving average against time until product is due
+     - 
+  
 # Serial Number Details
 
 Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then printed as a QR in batches of 1000 (000-999)
@@ -29,6 +46,12 @@ Records will be held for a minimum of 4 years, after that the oldest records wil
 
 ## Process Table
 Primary table for database
+```json
+{
+    "Serial Number":"4h39dh9e932",
+    "
+}
+```
    - Serial Number
    - ~~Assembly ID~~
    - ~~Assembly Revision~~ 
@@ -87,5 +110,7 @@ Used to deligate tasks and hold login credentials
    - Primary processes (SMT, AOI, Build... )
    - Secondary processes
    
+# Notes
+  - Just learned that MariaDB supports JSON arrays, which will change things considerably for the better.
 # Experimenting with junk
   [630058 B](/docs/Assembly Instructions/630058 B/Test.md)
