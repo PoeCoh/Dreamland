@@ -37,5 +37,5 @@ Inova | Slimline | 630041
    9. Place label as shown
    
 <p align="center">
-  <img src="label.jpg">
+  <img width="200" height="200" src="label.jpg">
 </p>
