@@ -18,13 +18,13 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
 Having learned that MariaDB supports JSON arrays I'm changing my tactics.
 1. User logs on
    - Application fetches assigned work roles for user from MDB
+   
      Name | Roles
      ---- | -----
      Ben | `{"Roles":["Test","Program"]}`
+     
      - Multiple roles can be assigned
      - Application will prioritize roles based on order
-     
-     
 
    - Application assigns job based on priority with information from GS and MDB
      - Priority is based off of estimated time to complete all steps based on 1000 board moving average against time until product is due
