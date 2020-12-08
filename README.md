@@ -17,6 +17,7 @@ It is important to note that this process tracks boards by ASSEMBLY, not by WORK
   
 Having learned that MariaDB supports JSON arrays I'm changing my tactics. This will allow me to consolidate the database by quite a bit.
 
+## From the perspective of the user
 1. User logs on Application
    - Application fetches assigned work roles for user from MDB
    
@@ -45,19 +46,22 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
    - Application verifies that all prior steps have been completed
    - Application notes current time for logging purposes
    - Process for board ends when
-     - User clicks `Complete`, Process list is updated for serial number
+     - User clicks `Complete`, Process Record is updated for serial number
      
        Serial Number | Process
        ------------- | -------
        sd399Dh3123 | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"Build":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
      
-     - User clicks `Issue`, an Issue Record is generated instead of updating the serial number's process list
+     - User clicks `Issue`, an Issue Record is generated instead of updating the serial number's Process Record
        
        Serial Number | Created | Closed
        ------------- | ----- | ------
        sd399Dh3123 | `{"Process":"Build","Created On":"YYYYMDDHHmmSS","Created By":"Ben","Issue":"Shits fucked up"}` | `{"Process":"Rework","Closed On":"YYYYMMDDHHmmSS","Closed By":"Ben","Notes":"Fixed everything"}`
      
      - User scans another board, prior board is assumed complete
+4. User requests new job when out of available assemblies for this process, or flags the process itself
+   - User can request a new job at any point, but if nothing has changed they will be served the same assembly/process
+   - If user flags a process management will be immediantly notified
   
 # Serial Number Details
 
