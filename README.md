@@ -71,7 +71,9 @@ Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then
   - The date is to ensure that no two serial numbers could possibly be identical
   - Casting in base64 is to dissasociate the serial number from a date as the actual date is irrelevant
   - QR format to keep footprint as small as possible, last 3 digits will also be displayed in plain text at the bottom of the label as some form of distinguishable marking
+  
   ![QRC](Unitag_QRCode_1607393414668.png)
+  123
   
 # Database Details
 Records will be held for a minimum of 4 years, after that the oldest records will be purged to make room for new records. Management will be alerted if disk space reaches x% with no more records eligible for removal.
