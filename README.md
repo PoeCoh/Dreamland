@@ -103,3 +103,5 @@ Documentation will be stored in a repository as such:
     - Ship
 
 This will allow for the application to easily find the correct information for any process and simplify automation where possible
+
+[Sample process doc](docs/Assembly Instructions/630041/Test/Procedure.md)
