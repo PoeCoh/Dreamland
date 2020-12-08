@@ -1,20 +1,4 @@
 # Process Walkthrough
-This is all a bit complicated so I'm going to run through the entire process should operate between the user, application, database, and Global Shop.
-It is important to note that this process tracks boards by ASSEMBLY, not by WORK ORDER. Assemblies are attached to work orders at shipping.
-- User logs into application
-- Application assigns process (assembly/processID) based on priority and displays task related instructions to user
-  - Priority is calculated based on estimated time required against planned shipping date
-  - Estimated time required is calculated by assemblies 1000 unit moving average time for each step remaining, for each board remaining
-  - If management places a hold on a work order all related assemblies and their processes will not be assigned for work until the hold is lifted
-- For each board, at the start of each process user will scan QR code, application will automatically log each board and push updates to Global Shop
-  - Application will verify that records exist for all previous processes, for each board, if records are not found user will be notified and board will not continue
-  - Information will be pushed at the end of the process for each board, process ends when
-    - User scans the next board, it is assumed that the prior board was completed
-    - User clicks "OK"
-    - User flags board for issue, Issue record will be created instead of a process record for this unit
-  - For test process, application will collect test data in json form when possible and create a record with data for each unit. In the event of failure test should automatically generate an Issue record for the unit
-  - For shipping, application will check serial number for completed records for each process for assemlby, and verify no open Issues remain. If no issues are found unit is applied to a work order
-  
 Having learned that MariaDB supports JSON arrays I'm changing my tactics. This will allow me to consolidate the database by quite a bit.
 
 ## From the perspective of the user
@@ -23,7 +7,7 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
    
      Name | Roles
      ---- | -----
-     Ben | `{"Roles":["Test","Program"]}`
+     Ben | `{ "Roles":["Test","Program"] }`
      
      - Multiple roles can be assigned
      - Application will prioritize roles based on order
@@ -39,36 +23,37 @@ Having learned that MariaDB supports JSON arrays I'm changing my tactics. This w
 3. User scans each assembly at start of process
    - Application fetches Serial Number's data from MDB
    
-     Serial Number | Assembly | Process
+     SerialNumber | Assembly | Process
      ------------- | -------- | -------
-     sd399Dh3123 | moogPOS | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
+     sd399Dh3123 | moogPOS | `{ "SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"], "AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"] }`
      
    - Application verifies that all prior steps have been completed
    - Application notes current time for logging purposes
    - Process for board ends when
      - User clicks `Complete`, Process Record is updated for serial number
      
-       Serial Number | Assembly | Process
+       SerialNumber | Assembly | Process
        ------------- | -------- | -------
-       sd399Dh3123 | moogPOS | `{"SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"],"Build":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"]}`
+       sd399Dh3123 | moogPOS | `{ "SMT":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"], "AOI":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"], "Build":["YYYYMMDDHHmmSS","YYYYMMDDHHmmSS"] }`
      
      - User clicks `Issue`, an Issue Record is generated instead of updating the serial number's Process Record
        
-       Serial Number | Created | Closed
+       SerialNumber | Created | Closed
        ------------- | ----- | ------
-       sd399Dh3123 | `{"Process":"Build","Created On":"YYYYMDDHHmmSS","Created By":"Ben","Issue":"Shits fucked up"}` | `{"Process":"Rework","Closed On":"YYYYMMDDHHmmSS","Closed By":"Ben","Notes":"Fixed everything"}`
+       sd399Dh3123 | `{ "Process":"Build", "CreatedOn":"YYYYMDDHHmmSS", "CreatedBy":"Ben", "Issue":"Shits fucked up" }` | `{ "Process":"Rework", "ClosedOn":"YYYYMMDDHHmmSS", "ClosedBy":"Ben", "Notes":"Fixed everything" }`
      
      - User scans another board, prior board is assumed complete
 4. User requests new job when out of available assemblies for this process, or flags the process itself
    - User can request a new job at any point, but if nothing has changed they will be served the same assembly/process
    - If user flags a process management will be immediantly notified   
+
 Notes:
-- 
+- Processes are tracked and prioritized by ASSEMBLY ID, not WORK ORDER. Assemblies are attached to work orders in shipping
 - For test, any data output by software will be captured and stored in a Test Record in JSON format
   
   Serial Number | Process | Data
   ------------- | ------- | ----
-  sd399Dh3123 | Test | `{...}`
+  sd399Dh3123 | Test | `{ ... }`
   
   -Data is captured purely for troubleshooting, RMAs, and sanity, it is not used for any verification or calculation
   
