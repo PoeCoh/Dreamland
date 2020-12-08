@@ -72,7 +72,21 @@ Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then
   - Casting in base64 is to dissasociate the serial number from a date as the actual date is irrelevant
   - QR format to keep footprint as small as possible, last 3 digits will also be displayed in plain text at the bottom of the label as some form of distinguishable marking
 
-<img align="center" width="100" height="100" src="Unitag_QRCode_1607393414668.png">
+<p align="center">
+  <img width="100" height="100" src="Unitag_QRCode_1607393414668.png">
+  <<b>Some Links:</b>
+</p>
+
+234 
+
+<p align="center">
+  <b>Some Links:</b><br>
+  <a href="#">Link 1</a> |
+  <a href="#">Link 2</a> |
+  <a href="#">Link 3</a>
+  <br><br>
+  <img src="http://s.4cdn.org/image/title/105.gif">
+</p>
 
     123
   
