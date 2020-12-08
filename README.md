@@ -65,6 +65,7 @@ Notes:
   - This tracks on both ends, above or below as both can be indicators of issues
 - Any process flagged by a user will be displayed
   - Application will require someone to affirm they have seen the flag within x time, else it will start sending emails and chats/texts if possible
+  
 # Serial Number Details
 Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then printed as a QR in batches of 1000 (000-999)
   - The date is to ensure that no two serial numbers could possibly be identical
