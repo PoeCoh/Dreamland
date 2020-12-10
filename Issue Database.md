@@ -26,3 +26,5 @@ Notes Array
     "Randy":"Board just worked"
 }
 ```
+
+Currently have this fleshed out in MariaDB.
