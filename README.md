@@ -98,6 +98,7 @@ Documentation will be stored in a repository as such:
       - Instructions.md (Written document in MarkDown)
       - Photo1.jpg (Image used in written document)
       - Photo2.jpg
+      - Skills.json (Skills requirement matrix for process)
     - AOI
     - Test
     - Ship
