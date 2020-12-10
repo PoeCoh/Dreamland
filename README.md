@@ -1,15 +1,13 @@
+# Brief
+  This is a general design document for how things are intended to look and operate
+
 # Process Walkthrough
 Having learned that MariaDB supports JSON arrays I'm changing my tactics. This will allow me to consolidate the database by quite a bit.
 
 ## From the perspective of the user
 1. User logs on Application
-   - Application fetches assigned work roles for user from MDB
-   
-     Name | Roles
-     ---- | -----
-     Ben | `{ "Roles":["Test","Program"] }`
-     
-     - [Secondary User Page](docs/User.md)
+   - Application fetches assigned work roles for user from MDdb
+     - [Link to User DB page](docs/User.md)
      - Multiple roles can be assigned
      - Application will prioritize roles based on order
    - Application creates a priority list of available jobs that match users roles
