@@ -1,8 +1,12 @@
 # Brief
-  This is a general design document for how things are intended to look and operate
+  This is a general design document for how things are intended to look and operate. As things actually get fleshed out and created it will evolve from design principles to database/application documentation
+  
+  Disclaimer, .md doesn't have spell check so this is probably riddled with typos.
+  
+# UI
+  My current plan is to modulize everything.  Main page will have a navigation menu baked in, but everything else will be div boxes, essentially websites loading into a website. This will allow everything to be packaged in small bit sized modules for easy organization and make redesigning the main page easier as all you have to do is reorganize a few imaginary grids.
 
 # Process Walkthrough
-Having learned that MariaDB supports JSON arrays I'm changing my tactics. This will allow me to consolidate the database by quite a bit.
 
 ## From the perspective of the user
 1. User logs on Application
@@ -89,10 +93,10 @@ Records will be held for a minimum of 4 years, after that the oldest records wil
 # Documentation Details
 Documentation will be stored in a repository as such:
 - docs
-  - moogPOS
-    - SMT
-      - Instructions.md
-      - Photo1.jpg
+  - moogPOS (Assembly ID)
+    - SMT (Process Folder)
+      - Instructions.md (Written document in MarkDown)
+      - Photo1.jpg (Image used in written document)
       - Photo2.jpg
     - AOI
     - Test
