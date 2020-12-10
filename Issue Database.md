@@ -27,4 +27,4 @@ Notes Array
 }
 ```
 
-Currently have this fleshed out in MariaDB.
+Currently have this fleshed out in MariaDB like the second method.
