@@ -1,3 +1,6 @@
+<iframe src="NavigationBar.html" height="50px" width="100%" title="Navigation Bar"><iframe>
+
+
 # Brief
   This is a general design document for how things are intended to look and operate. As things actually get fleshed out and created it will evolve from design principles to database/application documentation
   
