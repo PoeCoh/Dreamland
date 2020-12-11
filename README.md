@@ -83,7 +83,8 @@ Notes:
   - Application will require someone to affirm they have seen the flag within x time, else it will start sending emails and chats/texts if possible
   
 # Serial Number Details
-Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then printed as a QR in batches of 1000 (000-999)
+  Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then printed as a QR in batches of 1000 (000-999)
+  - QR codes will be printed off in batches of 1000
   - The date is to ensure that no two serial numbers could possibly be identical
   - Casting in base64 is to dissasociate the serial number from a date as the actual date is irrelevant
   - QR format to keep footprint as small as possible, last 4 characters will also be displayed in plain text at the bottom of the label as some form of distinguishable marking
