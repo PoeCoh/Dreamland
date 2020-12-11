@@ -86,11 +86,11 @@ Notes:
 Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then printed as a QR in batches of 1000 (000-999)
   - The date is to ensure that no two serial numbers could possibly be identical
   - Casting in base64 is to dissasociate the serial number from a date as the actual date is irrelevant
-  - QR format to keep footprint as small as possible, last 3 digits will also be displayed in plain text at the bottom of the label as some form of distinguishable marking
+  - QR format to keep footprint as small as possible, last 4 characters will also be displayed in plain text at the bottom of the label as some form of distinguishable marking
 
 <p align="center">
   <img width="100" height="100" src="Unitag_QRCode_1607393414668.png"><br>
-  <b>123</b>
+  <b>f123</b>
 </p>
 
   
