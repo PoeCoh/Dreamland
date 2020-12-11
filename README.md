@@ -1,14 +1,18 @@
 # Design Principles
   Web app will consist of a main page divided into iframes. This main page will contain minimal baked in elements like navigation and will be the primary page that users will interact with. Modules like e203 will be inserted into iframes. This will host the login functions and interact with the [User Database](User.md) to get the user's skill matrix and check assembly's skill requirements. As these modules are contained in iframes it will be relatively easy to rearrange them as needed.
   
-  <iframe src="Main.html"></iframe>
-  
-  This is just a simple examle, not the intended end result.
+  [Main page](Main.html) is very much a work in progress.
   
 ## Process Control Frame
+
+   <iframe src="ProcessControl.html" title="Process Control"></iframe>
+
    This will probably be the main iframe that users will interact with. Serial Numbers will be scanned into this module, check their history against the process steps in global shop, and either add to the [Serial Number's array](Serial Database.md) or generate an [Issue Report](Issue Database.md), the equivalent of an E-203, on steroids. If a scanned assembly does not have a record for a prior step as defined by Global Shop, module will not generate a new record and the assembly will not continue.
    
 ## Documentation Frame
+
+   <iframe src="Documentation.html" title="Documentation"></iframe>
+
    This iframe will display required work instructions for whatever process the user is currently working on. This will be automatically fetched from a repository.
 
 
