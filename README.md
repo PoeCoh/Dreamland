@@ -66,7 +66,7 @@ This will allow for the application to easily find the correct information for a
    Databases will run in parallel to Global Shop, it's only interaction will be fetching lists of Processes for Assemblies whenever someone starts working on a job. Application will compare the current Serial Number's Process Array to the list provided by Global Shop, if a process is missing from the Serial Number's Array the appication will alert the user and not permit the assembly to continue.
 
 ## Phase 2
-   Incorporate automated scheduling. Application will schedule individual processes based on time until due against the total estimated time to complete all assemblies in the order.
+   Incorporate automated scheduling. Application will schedule individual processes based on time until due against the total estimated time to complete all assemblies in the order. Processes will be assigned to users based on their skill matrix in the [User Database](User.md) and the skill requirements listed in the processes repository location.
    
    Estimated time will be calculated by:
    - Running average of 1000 assemblies per process
