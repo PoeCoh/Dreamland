@@ -11,7 +11,7 @@
    
 ## Documentation Frame
 
-   <iframe src="/docs/slim/Test/Instruction.md" title="Documentation"></iframe>
+   <iframe src="Instruction.md" title="Documentation"></iframe>
 
    This iframe will display required work instructions for whatever process the user is currently working on. This will be automatically fetched from a repository.
 
