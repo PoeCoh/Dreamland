@@ -5,13 +5,13 @@
   
 ## Process Control Frame
 
-   <iframe src="ProcessControl.html" title="Process Control"></iframe>
+   <iframe src="ProcessControl.html" height="100px" width="100%" title="Process Control"></iframe>
 
    This will probably be the main iframe that users will interact with. Serial Numbers will be scanned into this module, check their history against the process steps in global shop, and either add to the [Serial Number's array](Serial Database.md) or generate an [Issue Report](Issue Database.md), the equivalent of an E-203, on steroids. If a scanned assembly does not have a record for a prior step as defined by Global Shop, module will not generate a new record and the assembly will not continue.
    
 ## Documentation Frame
 
-   <iframe src="Instruction.html" title="Documentation"></iframe>
+   <iframe src="Instruction.html" height="100px" width="100%" title="Documentation"></iframe>
 
    This iframe will display required work instructions for whatever process the user is currently working on. This will be automatically fetched from a repository.
 
@@ -19,7 +19,7 @@
 # UI
   My current plan is to modulize everything.  Main page will have a navigation menu baked in, but everything else will be iframes.
   
-  <iframe src="Example.md" style="boarder:none" title="Example"></iframe>
+  <iframe src="Example.html" height="100px" width="100%" title="Example"></iframe>
   
   Essentially websites loading into a website. This will allow everything to be packaged in small bit sized modules for easy organization and make redesigning the main page easier as all you have to do is reorganize a few imaginary grids.
 
