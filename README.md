@@ -1,5 +1,5 @@
 # Design Principles
-  Web app will consist of a main page divided into iframes. This main page will contain minimal baked in elements like navigation and will be the primary page that users will interact with. Modules like e203 will be inserted into iframes.
+  Web app will consist of a main page divided into iframes. This main page will contain minimal baked in elements like navigation and will be the primary page that users will interact with. Modules like e203 will be inserted into iframes. This will host the login functions and interact with the [User Database](User Database.md) to get the user's skill matrix and check assembly's skill requirements.
   
   <iframe src="Main.html"></iframe>
   
