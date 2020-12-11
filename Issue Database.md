@@ -11,7 +11,7 @@ Serial Number | Created On | Created By | Issue Array | ClosedOn | Closed By | N
 ------------- | ---------- | ---------- | ----- | -------- | --------- | -----
 sghrg3234kn123 | 20201112140000 | Ben | {...} | 20201113124500 | Ben | {...}
 
-Issue Array
+Issue Array, I'm aware the format is atypical but trying to keep complexity to a minimum.
 ```json
 {
     "R45":["Skewed",1],
@@ -19,7 +19,7 @@ Issue Array
 }
 ```
 
-Notes Array, I'm aware the format is atypical but trying to keep complexity to a minimum.
+Notes Array.
 ```json
 {
     "Ben":"Super long string here as I always pack in as much information as technically allowed",
