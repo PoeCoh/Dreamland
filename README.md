@@ -62,11 +62,12 @@ This will allow for the application to easily find the correct information for a
 
 # Roadmap
   I'm splitting this into 3 phases
+
 ## Phase 1
-   Databases will run in parallel to Global Shop, it's only interaction will be fetching lists of Processes for Assemblies whenever someone starts working on a job. Application will compare the current Serial Number's Process Array to the list provided by Global Shop, if a process is missing from the Serial Number's Array the appication will alert the user and not permit the assembly to continue.
+   Databases will run in parallel to Global Shop, it's only interaction will be fetching lists of Processes for Assemblies whenever someone starts working on a job. Application will compare the current Serial Number's Process Array to the list provided by Global Shop, if a process is missing from the Serial Number's Array the appication will alert the user and not permit the assembly to continue. Users will still have to log yields in Global Shop.
 
 ## Phase 2
-   Incorporate automated scheduling. Application will schedule individual processes based on time until due against the total estimated time to complete all assemblies in the order. Processes will be assigned to users based on their skill matrix in the [User Database](User.md) and the skill requirements listed in the processes repository location.
+   Incorporate automated scheduling. Application will schedule individual processes based on time until due against the total estimated time to complete all assemblies in the order. Processes will be assigned to users based on their skill matrix in the [User Database](User.md) and the skill requirements listed in the processes repository location. When sufficient data is available application will use Serial Number's database to make calculations as those will be much more granular, if there is unsufficient data it will use Global Shop's records to  calculate time. Application will indicate which database it used to calculate time.
    
    Estimated time will be calculated by:
    - Running average of 1000 assemblies per process
@@ -80,4 +81,4 @@ This will allow for the application to easily find the correct information for a
      - If management flags an assembly as a priority it will push them through as soon as a user is avaible for a new job
      
 ## Phase 3
-   Application will sit between users and Global Shop, interaction directly with Global's systems will no longer be required. Every time a user scans and completes an assembly the application will push to Global Shop's database. Loging into and out of application will log user into and out of Global Shop. This also conveniently means we no longer have to deal with Global's glitchy interface jumping on everyone all the time.
+   Application will sit between users and Global Shop, user interaction directly with Global's systems will no longer be required. Every time a user scans and completes an assembly the application will push to Global Shop's database. Loging into and out of application will log user into and out of Global Shop. This also conveniently means we no longer have to deal with Global's glitchy interface jumping on everyone all the time.
