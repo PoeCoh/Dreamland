@@ -6,7 +6,8 @@
 ## Process Control Frame
    This will probably be the main iframe that users will interact with. Serial Numbers will be scanned into this module, check their history against the process steps in global shop, and either add to the [Serial Number's array](Serial Database.md) or generate an [Issue Report](Issue Database.md). If when scanned an assembly does not have a record for a prior step as defined by Global Shop, module will not generate a new record and the assembly will not continue.
    
-
+## Documentation Frame
+   This iframe will display required work instructions for whatever process the user is currently working on. This will be automatically fetched from a repository.
 
 
 # UI
