@@ -3,7 +3,12 @@
   
   <iframe src="Main.html"></iframe>
   
-  
+## Process Control Frame
+   This will probably be the main iframe that users will interact with. Serial Numbers will be scanned into this module, check their history against the process steps in global shop, and either add to the [Serial Number's array](Serial Database.md) or generate an [Issue Report](Issue Database.md). If when scanned an assembly does not have a record for a prior step as defined by Global Shop, module will not generate a new record and the assembly will not continue.
+   
+
+
+
 # UI
   My current plan is to modulize everything.  Main page will have a navigation menu baked in, but everything else will be iframes.
   
