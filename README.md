@@ -67,8 +67,15 @@ This will allow for the application to easily find the correct information for a
 
 ## Phase 2
    Incorporate automated scheduling. Application will schedule individual processes based on time until due against the total estimated time to complete all assemblies in the order.
+   
+   Estimated time will be calculated by:
+   - Running average of 1000 assemblies per process
+   - Number of assemblies remaining
+   - Processes remaining for each assembly
+   - Safety fudge factor
+   
    Additional rules:
-   - Will not assign a process unless at least 1 hours worth of assemblies are available to prevent time waste from constantly changing over to new jobs (not accusing us of doing this, but if this rule wasn't in place the application would). Exeptions:
+   - Will not assign a process unless at least 1 hours worth of assemblies are available for the next process to prevent time waste from constantly changing over to new jobs (not accusing us of doing this, but if this rule wasn't in place the application would). Exeptions:
      - If the total amount of the remaining assemblies is less than 1 hour, and all are ready for next process
      - If management flags an assembly as a priority it will push them through as soon as a user is avaible for a new job
      
