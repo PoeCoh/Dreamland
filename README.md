@@ -6,7 +6,7 @@
 # UI
   My current plan is to modulize everything.  Main page will have a navigation menu baked in, but everything else will be iframes.
   
-  <iframe src="https://www.google.com" style="boarder:none" title="Example"></iframe>
+  <iframe src="Example.md" style="boarder:none" title="Example"></iframe>
   
   Essentially websites loading into a website. This will allow everything to be packaged in small bit sized modules for easy organization and make redesigning the main page easier as all you have to do is reorganize a few imaginary grids.
 
