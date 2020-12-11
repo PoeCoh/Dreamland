@@ -1,9 +1,8 @@
 # Design Principles
-  Web app will consist of a main page divided into iframes. This main page will contain minimal baked in elements like navigation. Modules like e203 will be inserted into modules.
+  Web app will consist of a main page divided into iframes. This main page will contain minimal baked in elements like navigation and will be the primary page that users will interact with. Modules like e203 will be inserted into iframes.
   
   <iframe src="Example.html"></iframe>
   
-  Disclaimer, .md doesn't have spell check so this is probably riddled with typos.
   
 # UI
   My current plan is to modulize everything.  Main page will have a navigation menu baked in, but everything else will be iframes.
