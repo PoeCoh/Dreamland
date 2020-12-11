@@ -1,7 +1,7 @@
 # Design Principles
   Web app will consist of a main page divided into iframes. This main page will contain minimal baked in elements like navigation and will be the primary page that users will interact with. Modules like e203 will be inserted into iframes. This will host the login functions and interact with the [User Database](User.md) to get the user's skill matrix and check assembly's skill requirements. As these modules are contained in iframes it will be relatively easy to rearrange them as needed.
   
-  [Main page](Main.html) is very much a work in progress.
+  [Main page](Main.html), very much a work in progress and might be completely broken for a while.
   
 ## Process Control Frame
 
@@ -59,3 +59,18 @@ Documentation will be stored in a repository as such:
     - Ship
 
 This will allow for the application to easily find the correct information for any process and simplify automation where possible
+
+# Roadmap
+  I'm splitting this into 3 phases
+## Phase 1
+   Databases will run in parallel to Global Shop, it's only interaction will be fetching lists of Processes for Assemblies whenever someone starts working on a job. Application will compare the current Serial Number's Process Array to the list provided by Global Shop, if a process is missing from the Serial Number's Array the appication will alert the user and not permit the assembly to continue.
+
+## Phase 2
+   Incorporate automated scheduling. Application will schedule individual processes based on time until due against the total estimated time to complete all assemblies in the order.
+   Additional rules:
+   - Will not assign a process unless at least 1 hours worth of assemblies are available to prevent time waste from constantly changing over to new jobs (not accusing us of doing this, but if this rule wasn't in place the application would). Exeptions:
+     - If the total amount of the remaining assemblies is less than 1 hour, and all are ready for next process
+     - If management flags an assembly as a priority it will push them through as soon as a user is avaible for a new job
+     
+## Phase 3
+   Application will sit between users and Global Shop, interaction directly with Global's systems will no longer be required. Every time a user scans and completes an assembly the application will push to Global Shop's database. Loging into and out of application will log user into and out of Global Shop. This also conveniently means we no longer have to deal with Global's glitchy interface jumping on everyone all the time.
