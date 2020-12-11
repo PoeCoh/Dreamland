@@ -15,7 +15,7 @@
 ## From the perspective of the user
 1. User logs on Application
    - Application fetches assigned work roles for user from MDdb
-     - [Link to User DB page](docs/User.md)
+     - [Link to User DB page](User.md)
      - Multiple roles can be assigned
      - Application will prioritize roles based on order
    - Application creates a priority list of available jobs that match users roles
