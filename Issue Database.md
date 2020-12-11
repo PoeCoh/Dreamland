@@ -19,7 +19,7 @@ Issue Array
 }
 ```
 
-Notes Array
+Notes Array, I'm aware the format is atypical but trying to keep complexity to a minimum.
 ```json
 {
     "Ben":"Super long string here as I always pack in as much information as technically allowed",
