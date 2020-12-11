@@ -1,6 +1,8 @@
 # Design Principles
   Web app will consist of a main page divided into iframes. This main page will contain minimal baked in elements like navigation and will be the primary page that users will interact with. Modules like e203 will be inserted into iframes. This will host the login functions and interact with the [User Database](User.md) to get the user's skill matrix and check assembly's skill requirements. As these modules are contained in iframes it will be relatively easy to rearrange them as needed.
   
+  I've experimented with PowerApps, ReTool, and a lot of other off the shelf solutions but they all charged a premium for interacting with databases... per user. Ultimatly I got fed up with those as they neither did quite what I wanted to do and were not very cost effective. For our purposes any solution would have to be web based so it could run off of any hardware so I decided to suck it up and contend with the languages that I hate and build a solution from scratch.
+  
   [Main page](Main.html), very much a work in progress and might be completely broken for a while.
   
 ## Process Control Frame
