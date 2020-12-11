@@ -1,5 +1,7 @@
-# Brief
-  This is a general design document for how things are intended to look and operate. As things actually get fleshed out and created it will evolve from design principles to database/application documentation
+# Design Principles
+  Web app will consist of a main page divided into iframes. This main page will contain minimal baked in elements like navigation. Modules like e203 will be inserted into modules.
+  
+  <iframe src="Example.html"></iframe>
   
   Disclaimer, .md doesn't have spell check so this is probably riddled with typos.
   
