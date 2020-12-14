@@ -3,7 +3,7 @@
   
   I've experimented with PowerApps, ReTool, and a lot of other off the shelf solutions but they all charged a premium for interacting with databases... per user. Ultimatly I got fed up with those as they neither did quite what I wanted to do nor were they cost effective. For our purposes any solution would have to be web based so it could run off of any hardware so I decided to suck it up and contend with the languages that I hate and build a solution from scratch. Bonus of this is users can pull up information on ANY device. For this reason future database and server should run behind our network so you have to be on our network to use it. Until then I'm hosting on GitHub to flesh everything out, when done it's a matter of copy/paste as all references will be relational.
   
-  [Main page](Main.html), very much a work in progress and might be completely broken for a while.
+  [Main page](/assets/html/main.html), very much a work in progress and might be completely broken for a while.
   
 ## Process Control Frame
 
