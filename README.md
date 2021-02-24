@@ -18,11 +18,10 @@
    This iframe will display required work instructions for whatever process the user is currently working on. This will be automatically fetched from a repository.
 
 # Serial Number Details
-  Serial Numbers will be formatted as YYYYMMDDHHMMSS###, then cast to base64, then printed as a QR in batches of 1000 (000-999)
-  - QR codes will be printed off in batches of 1000
-  - The date is to ensure that no two serial numbers could possibly be identical
-  - Casting in base64 is to dissasociate the serial number from a date as the actual date is irrelevant
-  - QR format to keep footprint as small as possible, last 4 characters will also be displayed in plain text at the bottom of the label as some form of distinguishable marking
+  Serial Numbers will be unix time with three incrementing numbers appended to the end.
+  - QR codes will be printed off in batches of 1000 (000-999).
+  - The date is to ensure that no two serial numbers could possibly be identical without the need to lookup past serials.
+  - QR format to keep footprint as small as possible, last 4 characters will also be displayed in plain text at the bottom of the label as a human readable marking.
 
 <p align="center">
   <img width="100" height="100" src="Unitag_QRCode_1607393414668.png"><br>
